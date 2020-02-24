@@ -14,13 +14,6 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.jsimone/webapp-runner -->
-		<dependency>
-    		<groupId>com.github.jsimone</groupId>
-   			 <artifactId>webapp-runner</artifactId>
-   			 <version>9.0.27.1</version>
-    		<scope>provided</scope>
-		</dependency>
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-codegen</artifactId>
@@ -58,16 +51,16 @@
             <version>1.4.7</version>
         </dependency>
         <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.10</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <version>42.2.9</version>
-      </dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.9</version>
+        </dependency>
         <dependency>
             <groupId>org.ocpsoft.rewrite</groupId>
             <artifactId>rewrite-servlet</artifactId>
@@ -127,6 +120,27 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>copy</goal></goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>8.5.31.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
