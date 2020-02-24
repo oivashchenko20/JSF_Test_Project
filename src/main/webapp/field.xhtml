@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <ui:include src="parts/head.xhtml"/>
+</h:head>
+<h:body>
+    <h:form>
+        <ui:include src="parts/navbar.xhtml"></ui:include>
+    </h:form>
+    <h:form id="form">
+        <p:outputPanel style="margin-top: 2%;">
+            <p:outputLabel styleClass="center-logo">Fields</p:outputLabel>
+            <p:commandButton process="@this" oncomplete="PF('addDialog').show()" action="#{fieldBean.reset}"
+                             update=":form:addDialog"
+                             styleClass="addBtn" value="+ Add Field">
+            </p:commandButton>
+        </p:outputPanel>
+        <p:dialog widgetVar="addDialog" header="Add Field" showEffect="fade" hideEffect="fade" resizable="false"
+                  modal="true" height="500" width="600" id="addDialog">
+            <h:panelGrid cellpadding="15" id="panelAddDialog">
+                <p:messages id="messages" severity="warn"/>
+                <p:column>
+                    <p:outputLabel for="name" value="Label" styleClass="input"><span
+                            class="star"> *</span></p:outputLabel>
+                    <p:inputText value="#{fieldBean.fieldDto.name}" id="name"/>
+                </p:column>
+                <p:column>
+                    <p:outputLabel for="selectType" value="Type" styleClass="input"><span
+                            class="star"> *</span></p:outputLabel>
+                    <p:selectOneMenu value="#{fieldBean.fieldDto.type}" id="selectType" widgetVar="selectType"
+                                     onchange="getChange()" styleClass="input">
+                        <f:selectItems value="#{fieldBean.fieldDto.types}" var="type"
+                                       itemLabel="#{type}" itemValue="#{type}"/>
+                    </p:selectOneMenu>
+                </p:column>
+                <p:column>
+                    <p:outputLabel styleClass="input" for="required" value="Required"><span
+                            class="star"> *</span></p:outputLabel>
+                    <p:selectBooleanCheckbox styleClass="input" value="#{fieldBean.fieldDto.required}" id="required"/>
+                </p:column>
+                <p:column>
+                    <p:outputLabel for="active" styleClass="input" value="Active"><span
+                            class="star"> *</span></p:outputLabel>
+                    <p:selectBooleanCheckbox styleClass="input" value="#{fieldBean.fieldDto.active}" id="active"/>
+                </p:column>
+                <p:outputPanel style="display: none;" id="option">
+                    <p:column>
+                        <p:outputLabel for="inputOption" styleClass="input" value="Options"><span
+                                class="star"> *</span></p:outputLabel>
+                        <p:inputTextarea value="#{fieldBean.fieldDto.text}"
+                                         styleClass="input" id="inputOption">
+                        </p:inputTextarea>
+                    </p:column>
+                </p:outputPanel>
+                <p:column>
+                    <p:commandButton onerror="PF('addDialog').hide()" value="Add"
+                                     action="#{fieldBean.addField}" update="messages"
+                                     styleClass="panelBtn">
+                    </p:commandButton>
+                </p:column>
+            </h:panelGrid>
+        </p:dialog>
+        <p:dataTable style="margin-top: 2%" value="#{fieldBean.allFields}" var="field"
+                     paginator="true"
+                     rows="5"
+                     paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
+                     rowsPerPageTemplate="5,#{fieldBean.allFields.size()}"
+                     lazy="true"
+        paginatorPosition="bottom">
+            <p:column headerText="Label">
+                <h:outputText value="#{field.name}"/>
+            </p:column>
+            <p:column headerText="Type">
+                <h:outputText value="#{field.type}"/>
+            </p:column>
+            <p:column headerText="Active">
+                <h:outputText value="#{field.active}"/>
+            </p:column>
+            <p:column headerText="Required">
+                <h:outputText value="#{field.required}"/>
+            </p:column>
+            <p:column headerText="Edit">
+                <p:commandButton value="Edit" styleClass="btn"
+                                 update=":form:fieldEdit"
+                                 oncomplete="PF('editDialog').show()">
+                    <f:setPropertyActionListener value="#{field}" target="#{fieldBean.selectedField}"/>
+                </p:commandButton>
+            </p:column>
+            <p:column headerText="Delete">
+                <p:commandButton value="Delete"
+                                 styleClass="btn" onclick="PF('deleteDialog').show()"
+                                 update=":form:fieldDelete">
+                    <f:setPropertyActionListener value="#{field}" target="#{fieldBean.selectedField}"/>
+                </p:commandButton>
+            </p:column>
+        </p:dataTable>
+        <p:dialog header="Delete Field" widgetVar="deleteDialog" modal="true"
+                  showEffect="fade" hideEffect="fade" resizable="false" height="150" width="300">
+            <p:outputPanel id="fieldDelete" style="text-align: center; ">
+                <p:outputLabel styleClass="center-logo" value="#{client['field.delete']}"/>
+                <p:outputPanel style="margin-top: 50px !important;">
+                    <p:commandButton action="#{fieldBean.deleteField()}"
+                                     style="float: left;"
+                                     styleClass="panelBtn"
+                                     value="Yes" onclick="PF('deleteDialog').hide()"/>
+                    <p:commandButton style=" float: right;"
+                                     styleClass="panelBtn"
+                                     onclick="PF('deleteDialog').hide()" value="No"/>
+                </p:outputPanel>
+            </p:outputPanel>
+        </p:dialog>
+        <p:outputPanel id="fieldEdit">
+            <p:dialog header="Edit Field" widgetVar="editDialog" modal="true"
+                      showEffect="fade" hideEffect="fade" resizable="false">
+                <h:panelGrid cellpadding="15" rendered="#{not empty fieldBean.selectedField}">
+                    <p:messages id="messageEdit" severity="warn"></p:messages>
+                    <p:column>
+                        <p:outputLabel for="nameEdit" value="Label" styleClass="input"><span
+                                class="star"> *</span></p:outputLabel>
+                        <p:inputText value="#{fieldBean.selectedField.name}" id="nameEdit"/>
+                    </p:column>
+                    <p:column>
+                        <p:outputLabel for="typeEdit" value="Type" styleClass="input"><span
+                                class="star"> *</span></p:outputLabel>
+                        <p:selectOneMenu value="#{fieldBean.selectedField.type}" id="typeEdit"
+                                         widgetVar="typeEdit" onchange="getEditChange()" styleClass="input">
+                            <f:selectItems value="#{fieldBean.fieldDto.types}" var="type"
+                                           itemLabel="#{type}" itemValue="#{type}"/>
+                        </p:selectOneMenu>
+                    </p:column>
+                    <p:column>
+                        <p:outputLabel styleClass="input" for="requiredEdit" value="Required"><span
+                                class="star"> *</span></p:outputLabel>
+                        <p:selectBooleanCheckbox styleClass="input" value="#{fieldBean.selectedField.required}"
+                                                 id="requiredEdit"/>
+                    </p:column>
+                    <p:column>
+                        <p:outputLabel for="activeEdit" styleClass="input" value="Active"><span
+                                class="star"> *</span></p:outputLabel>
+                        <p:selectBooleanCheckbox styleClass="input" value="#{fieldBean.selectedField.active}"
+                                                 id="activeEdit"/>
+                    </p:column>
+                    <p:outputPanel id="optionEdit" style="display: none;">
+                        <p:column>
+                            <p:outputLabel for="inputOptionEdit" styleClass="input"
+                                           value="Options"><span class="star"> *</span></p:outputLabel>
+                            <p:inputTextarea value="#{fieldBean.selectedOption}" styleClass="input"
+                                             id="inputOptionEdit">
+                            </p:inputTextarea>
+                        </p:column>
+                    </p:outputPanel>
+                    <p:column>
+                        <script type="text/javascript">
+                            var boxEdit = document.getElementById('form:optionEdit');
+                            var type = PF('typeEdit').getSelectedValue();
+                            if (type === 'COMBOBOX' || type === 'RADIOBUTTON') {
+                                boxEdit.style.display = "block";
+                            }
+                        </script>
+                        <p:commandButton onerror="PF('editDialog').hide()" value="Edit"
+                                         action="#{fieldBean.updateField}"
+                                         styleClass="panelBtn" update="messageEdit">
+                        </p:commandButton>
+                    </p:column>
+                </h:panelGrid>
+            </p:dialog>
+        </p:outputPanel>
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+        <h:outputScript library="js" name="showOption.js"/>
+        <h:outputScript library="js" name="showEditOption.js"/>
+    </h:form>
+</h:body>
+</html>

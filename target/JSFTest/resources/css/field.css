@@ -1,0 +1,26 @@
+.addBtn {
+    background: #007bff !important;
+    color: white !important;
+    float: right;
+}
+
+.input {
+    font-size: 1.5em !important;
+    margin-right: 20px;
+}
+
+.output:empty:after {
+    content: 'N/A';
+}
+
+.star {
+    color: red;
+}
+
+.panelBtn {
+    background: #007bff !important;
+    color: white !important;
+    font-size: 1.2em !important;
+    margin-top: 5% !important;
+}
+

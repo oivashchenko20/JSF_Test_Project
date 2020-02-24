@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <ui:include src="parts/head.xhtml"></ui:include>
+</h:head>
+<h:body>
+    <h:form id="form1">
+        <ui:include src="parts/navbar.xhtml"></ui:include>
+    </h:form>
+    <h:form id="form">
+        <p:outputLabel styleClass="center-logo">Responses</p:outputLabel>
+        <p:dataTable style="margin-top: 2%;" value="#{mainBean.allResponses}" var="response" id="table"
+                     paginator="true"
+                     rows="5"
+                     paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
+                     rowsPerPageTemplate="5,#{mainBean.allResponses.size()}"
+                     lazy="true"
+                     paginatorPosition="bottom">
+            <p:columns value="#{mainBean.findFields}" var="field" columnIndexVar="columnIndex" styleClass="output">
+                <f:facet name="header">
+                    <p:outputLabel value="#{field.name}"/>
+                </f:facet>
+                <ui:repeat value="#{mainBean.allAnswers}" var="answer">
+                    <h:outputText value="#{answer.text}"
+                                  rendered="#{answer.field.id.equals(field.id) and answer.response.id.equals(response.id)}"/>
+                </ui:repeat>
+            </p:columns>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>

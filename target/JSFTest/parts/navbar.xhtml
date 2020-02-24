@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition>
+    <h:head>
+        <h:outputStylesheet library="css" name="menu.css"/>
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+    </h:head>
+    <p:menubar styleClass="menu">
+        <p:menuitem styleClass="logotype" url="/"> <span class="type"> LOGO</span><span
+                class="logo">TYPE</span></p:menuitem>
+        <p:menuitem rendered="#{loginBean.selectedUser.role=='ADMIN'}" styleClass="field" style="margin-left: 800px;"
+                    url="fields"
+                    value="Field"></p:menuitem>
+        <p:menuitem styleClass="field" rendered="#{loginBean.selectedUser.role=='ADMIN'}" url="responses"
+                    value="Response" style="margin-left: 100px;"></p:menuitem>
+        <p:submenu label="#{loginBean.selectedUser.fullName}" styleClass="field" style="margin-left: 100px;">
+            <p:menuitem value="Change password" url="/changePassword"></p:menuitem>
+            <p:menuitem value="Edit Profile" url="/profile"></p:menuitem>
+            <p:menuitem value="Logout" action="#{loginBean.logout}"></p:menuitem>
+        </p:submenu>
+    </p:menubar>
+</ui:composition>
+</html>

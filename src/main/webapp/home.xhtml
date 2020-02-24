@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Copybook</title>
+    <h:outputStylesheet library="css" name="portal.css"/>
+</h:head>
+<h:body>
+    <h:form>
+        <ui:include src="parts/navbar.xhtml"></ui:include>
+    </h:form>
+    <h:form>
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate/>
+        </p:messages>
+    </h:form>
+    <h:form id="form">
+        <h:panelGrid cellpadding="10" styleClass="form" id="panel">
+            <p:outputLabel styleClass="center-logo">Questionnaire portal</p:outputLabel>
+            <p:outputPanel id="main">
+                <p:messages id="validator" severity="warn"/>
+                <ui:repeat value="#{mainBean.allFields}" var="field" varStatus="loop">
+                    <p:outputPanel rendered="#{field.type=='TEXT' and field.required==false}" styleClass="panel">
+                        <p:outputLabel for="text" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:inputText id="text" value="#{mainBean.answer}">
+                            <f:validateLength maximum="255"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:inputText>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='TEXT' and field.required==true}"
+                                   styleClass="panel">
+                        <p:outputLabel for="text1" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:inputText id="text1" value="#{mainBean.answer}"
+                                     required="true">
+                            <f:validateLength maximum="255"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:inputText>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='CHECKBOX'}" styleClass="panel">
+                        <p:outputLabel for="checkbox1" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:selectBooleanCheckbox id="checkbox1"
+                                                 value="#{mainBean.answer}">
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:selectBooleanCheckbox>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='COMBOBOX' and field.required==true}" styleClass="panel">
+                        <p:outputLabel for="combobox1" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:selectOneMenu placeholder="Select option" id="combobox1" value="#{mainBean.answer}"
+                                         required="true">
+                            <f:selectItem itemLabel="Select option" itemValue=""/>
+                            <f:selectItems value="#{mainBean.getOptionsByField(field)}" var="option"
+                                           itemValue="#{option.text}" itemLabel="#{option.text}"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:selectOneMenu>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='COMBOBOX' and field.required==false}"
+                                   styleClass="panel">
+                        <p:outputLabel for="combobox" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:selectOneMenu placeholder="Select option" id="combobox" value="#{mainBean.answer}">
+                            <f:selectItem itemLabel="Select option" itemValue=""/>
+                            <f:selectItems value="#{mainBean.getOptionsByField(field)}" var="option"
+                                           itemValue="#{option.text}" itemLabel="#{option.text}"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:selectOneMenu>
+                    </p:outputPanel>
+                    <p:outputPanel
+                            rendered="#{field.type=='RADIOBUTTON' and field.required==false}"
+                            styleClass="panel">
+                        <p:outputLabel for="radiobutton" value="#{field.name}"/>
+                        <p:selectOneRadio id="radiobutton" value="#{mainBean.answer}"
+                                          layout="grid"
+                                          columns="#{mainBean.getOptionsByField(field).size()}"
+                                          styleClass="radio-button">
+                            <f:selectItems value="#{mainBean.getOptionsByField(field)}" var="option"
+                                           itemLabel="#{option.text}" itemValue="#{option.text}"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:selectOneRadio>
+                    </p:outputPanel>
+                    <p:outputPanel
+                            rendered="#{field.type=='RADIOBUTTON' and field.required==true}"
+                            styleClass="panel">
+                        <p:outputLabel for="radiobutton1" value="#{field.name}"/>
+                        <p:selectOneRadio id="radiobutton1" value="#{mainBean.answer}"
+                                          layout="grid"
+                                          columns="#{mainBean.getOptionsByField(field).size()}"
+                                          required="true"
+                                          styleClass="radio-button">
+                            <f:selectItems value="#{mainBean.getOptionsByField(field)}" var="option"
+                                           itemLabel="#{option.text}" itemValue="#{option.text}"/>
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                        </p:selectOneRadio>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='TEXTAREA' and field.required==false}"
+                                   styleClass="panel">
+                        <p:outputLabel for="textarea" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:inputTextarea id="textarea" value="#{mainBean.answer}">
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                            <f:validateLength maximum="255"/>
+                        </p:inputTextarea>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='TEXTAREA' and field.required==true}"
+                                   styleClass="panel">
+                        <p:outputLabel for="textarea1" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:inputTextarea id="textarea1" value="#{mainBean.answer}"
+                                         required="true">
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                            <f:validateLength maximum="255"/>
+                        </p:inputTextarea>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='DATE' and field.required==false}"
+                                   styleClass="panel">
+                        <p:outputLabel for="date" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:calendar id="date" value="#{mainBean.dateAnswer}"
+                                    pattern="dd/MM/yyyy">
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </p:calendar>
+                    </p:outputPanel>
+                    <p:outputPanel rendered="#{field.type=='DATE' and field.required==true}"
+                                   styleClass="panel">
+                        <p:outputLabel for="date1" value="#{field.name}"
+                                       styleClass="output"></p:outputLabel>
+                        <p:calendar id="date1" value="#{mainBean.dateAnswer}"
+                                    required="true" pattern="dd/MM/yyyy">
+                            <p:ajax listener="#{mainBean.addToList(field)}"/>
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </p:calendar>
+                    </p:outputPanel>
+                </ui:repeat>
+            </p:outputPanel>
+            <p:commandButton value="SAVE"
+                             styleClass="panelBtn"
+                             action="#{mainBean.addResponse}" actionListener="#{mainBean.closeAnswer}"
+                             binding="#{field}" process=":form:panel">
+            </p:commandButton>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

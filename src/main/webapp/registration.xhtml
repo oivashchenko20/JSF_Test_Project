@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <ui:include src="parts/head.xhtml"/>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid cellpadding="14" styleClass="login-form">
+            <p:outputLabel styleClass="center-logo">LOGO<span class="logo">TYPE</span></p:outputLabel>
+            <p:outputLabel style="font-size: 1.4em">Sign up</p:outputLabel>
+            <p:messages id="messages" severity="fatal,info,warn"/>
+            <p:inputText value="#{loginBean.user.email}" id="email" styleClass="required" placeholder="Email*"/>
+            <p:password value="#{loginBean.user.password}" id="password" styleClass="required" placeholder="Password*"/>
+            <p:password value="#{loginBean.user.confirmPassword}" id="confirm" styleClass="required" placeholder="Confirm Password*"/>
+            <p:inputText value="#{loginBean.user.firstName}" id="firstName" placeholder="First Name"/>
+            <p:inputText value="#{loginBean.user.lastName}" id="lastName" placeholder="Last Name"/>
+            <p:inputMask mask="999-999-9999" value="#{loginBean.user.mobile}" id="mobile" placeholder="Phone Number"/>
+            <p:commandButton value="SIGN UP" styleClass="btn" action="#{loginBean.registration}" update="messages"/>
+            <p:outputPanel>
+                <p:outputLabel value="#{client['register.message']}"></p:outputLabel>
+                <p:link value="Log in" styleClass="link" href="/login.xhtml"></p:link>
+            </p:outputPanel>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

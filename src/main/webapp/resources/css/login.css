@@ -1,0 +1,48 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+
+.login-form {
+    margin-left: 40%;
+    margin-right: 25%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.edit {
+    margin-left: 40%;
+    margin-right: 25%;
+    margin-top: 3%;
+}
+
+.logo {
+    color: #007bff;
+}
+
+.center-logo {
+    font-size: 1.8em !important;
+}
+
+.link {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: 10px;
+}
+
+.star {
+    color: red;
+}
+
+.label {
+    margin-right: 140px;
+}
+
+.btn {
+    color: white !important;
+    background: #007bff !important;
+}
+
+.required::placeholder {
+    color: red;
+}
+

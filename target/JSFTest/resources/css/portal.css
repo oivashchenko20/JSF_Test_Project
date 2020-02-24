@@ -1,0 +1,33 @@
+.form {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.panel {
+    margin-top: 3%;
+}
+
+.radio-button {
+    text-align: center !important;
+    margin-left: 40% !important;
+    margin-top: 3% !important;
+}
+
+.panelBtn {
+    background: #007bff !important;
+    color: white !important;
+    font-size: 1.2em !important;
+    margin-top: 5% !important;
+}
+
+.output{
+    margin-right: 2% !important;
+}
+
+.center-logo{
+font-size: 1.6em !important;
+}

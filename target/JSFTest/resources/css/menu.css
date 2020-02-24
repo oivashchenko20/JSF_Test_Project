@@ -1,0 +1,40 @@
+.logotype {
+    font-size: 1.8em !important;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2) !important;
+
+}
+
+.logo {
+    color: #007bff;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2) !important;
+}
+
+.type {
+    color: black;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2) !important;
+}
+
+#logo {
+    font-size: 1.5em;
+}
+
+.field {
+    text-decoration: none;
+    background: linear-gradient(#ffffff, #f2f2f2) !important;
+    font-size: 1.1em;
+    color: black !important;
+}
+
+#field {
+    margin-left: 700px;
+}
+
+#response {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.ui-menuitem.ui-widget.ui-corner-all {
+    display: flex;
+    justify-content: space-between;
+}

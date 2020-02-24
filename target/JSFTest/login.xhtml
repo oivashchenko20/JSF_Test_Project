@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <ui:include src="parts/head.xhtml"/>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid styleClass="login-form"
+                     style="width: 50% !important; margin-right: 50% !important; margin-left: 25% !important; "
+                     cellpadding="7">
+            <p:outputLabel styleClass="center-logo">LOGO<span class="logo">TYPE</span></p:outputLabel>
+            <p:outputLabel styleClass="mainLogo">Log in</p:outputLabel>
+            <p:messages id="messages" severity="warn"/>
+            <p:inputText id="email" type="email" value="#{loginBean.user.email}" placeholder="Email"/>
+            <p:password styleClass="form-control" placeholder="Password" id="password"
+                        value="#{loginBean.user.password}"/>
+            <p:outputPanel>
+                <p:selectBooleanCheckbox value="#{loginBean.rememberMe}" id="rememberMe"/>
+                <p:outputLabel for="rememberMe" styleClass="output">Remember me</p:outputLabel>
+                <p:link value="Forgot password?" styleClass="link" href="/forgotPassword"/>
+            </p:outputPanel>
+
+            <p:commandButton styleClass="btn" style="width: 200px !important;" action="#{loginBean.loginProject}" value="Log in" update="messages"/>
+            <p:outputPanel>
+                <p:outputLabel value="#{client['login.message']}"/>
+                <p:link styleClass="link" value="Sign in" href="/registration"/>
+            </p:outputPanel>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
