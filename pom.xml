@@ -14,6 +14,13 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.jsimone/webapp-runner -->
+		<dependency>
+    		<groupId>com.github.jsimone</groupId>
+   			 <artifactId>webapp-runner</artifactId>
+   			 <version>9.0.27.1</version>
+    		<scope>provided</scope>
+		</dependency>
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-codegen</artifactId>
