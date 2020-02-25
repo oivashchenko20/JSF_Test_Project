@@ -8,18 +8,15 @@
   <component name="ChangeListManager">
     <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/JSFTest.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/FieldsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/FieldsBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/JSFTest/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/JSFTest.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/FieldsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/FieldsBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -326,6 +323,7 @@
       <workItem from="1582647454294" duration="250000" />
       <workItem from="1582648016024" duration="1563000" />
       <workItem from="1582649685737" duration="14000" />
+      <workItem from="1582650010369" duration="1826000" />
     </task>
     <servers />
   </component>
@@ -482,22 +480,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="161" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581004648497" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JSFTest$Tomcat_8.ic" NAME="Tomcat 8 Coverage Results" MODIFIED="1580591048176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

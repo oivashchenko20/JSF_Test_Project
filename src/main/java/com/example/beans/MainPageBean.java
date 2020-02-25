@@ -7,7 +7,7 @@ import lombok.Data;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.text.DateFormat;
@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @ManagedBean(name = "mainBean")
-@SessionScoped
+@ViewScoped
 @Data
 public class MainPageBean implements Serializable {
     private User user;
