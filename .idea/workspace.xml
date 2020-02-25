@@ -8,8 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/MailUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/MailUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +129,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+    <configuration name="Tomcat 8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -132,7 +140,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JSFTest_6" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JSFTest_7" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -308,6 +316,7 @@
       <workItem from="1582642214169" duration="201000" />
       <workItem from="1582642522133" duration="163000" />
       <workItem from="1582643093412" duration="880000" />
+      <workItem from="1582644576410" duration="915000" />
     </task>
     <servers />
   </component>

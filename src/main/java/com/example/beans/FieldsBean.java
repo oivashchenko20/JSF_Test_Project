@@ -35,10 +35,6 @@ public class FieldsBean implements Serializable {
         this.user = (User) facesContext.getExternalContext().getSessionMap().get("user");
     }
 
-    public void setSelectedField(Field selectedField) {
-        this.selectedField = new Field(selectedField);
-    }
-
     public List<Field> getAllFields() {
         return fieldDao.findAll();
     }

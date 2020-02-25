@@ -32,7 +32,7 @@ public class FieldDao {
             field.setDelete(false);
             field.setAuthor(user);
             entityManager.persist(field);
-            if (!fieldDto.getText().equals("")) {
+            if (!fieldDto.getText().isEmpty()) {
                 saveOptions(fieldDto.getText(), field);
             }
             entityManager.getTransaction().commit();
