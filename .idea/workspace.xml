@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/home.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/home.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" afterDir="false" />
-    </list>
+    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,6 +313,7 @@
       <workItem from="1582648016024" duration="1563000" />
       <workItem from="1582649685737" duration="14000" />
       <workItem from="1582650010369" duration="1826000" />
+      <workItem from="1582652168858" duration="129000" />
     </task>
     <servers />
   </component>
