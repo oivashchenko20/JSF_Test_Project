@@ -9,40 +9,6 @@
     <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/field.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/field.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/response.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/response.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/FieldDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/MainDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/MainDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/DAO/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/FieldsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/FieldsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/LoginBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/beans/MainPageBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/dto/FieldDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/dto/FieldDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/encodingMD5/EncoderPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/encodingMD5/EncoderPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/entity/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/entity/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/JPAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/JPAUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/changePassword.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/changePassword.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/field.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/field.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/forgotPassword.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/forgotPassword.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/registration.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/registration.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/resources/css/portal.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/resources/css/portal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/response.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/response.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/FieldDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/MainDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/MainDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/DAO/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/DAO/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/FieldsBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/FieldsBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/LoginBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/LoginBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/beans/MainPageBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/dto/FieldDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/dto/FieldDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/encodingMD5/EncoderPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/encodingMD5/EncoderPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/entity/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entity/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/util/JPAUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/util/JPAUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -339,6 +305,7 @@
       <workItem from="1582569755262" duration="1339000" />
       <workItem from="1582639754351" duration="2240000" />
       <workItem from="1582642214169" duration="201000" />
+      <workItem from="1582642522133" duration="163000" />
     </task>
     <servers />
   </component>
