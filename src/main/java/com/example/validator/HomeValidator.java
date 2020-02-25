@@ -24,10 +24,10 @@ public class HomeValidator {
             setMessage(BUNDLE.getString("answer.text.length"), BUNDLE.getString("answer.text.length"));
             return false;
         }
-        if (field.getType().equals(Type.TEXTAREA) && answer.length()>255){
+        if (field.getType().equals(Type.TEXTAREA) && answer.length() > 255) {
             setMessage(BUNDLE.getString("answer.textarea.length"), BUNDLE.getString("answer.textarea.length"));
             return false;
         }
-            return true;
+        return true;
     }
 }

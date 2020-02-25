@@ -6,7 +6,32 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="" />
+    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/DAO/FieldDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/FieldDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/DAO/MainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/MainDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/FieldsBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/LoginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dto/FieldDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dto/FieldDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/encodingMD5/EncoderPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/encodingMD5/EncoderPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/JPAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/JPAUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/validator/HomeValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/validator/HomeValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/validator/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/validator/LoginValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changePassword.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changePassword.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/field.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/field.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/forgotPassword.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forgotPassword.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/portal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/portal.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +324,8 @@
       <workItem from="1582532614807" duration="8063000" />
       <workItem from="1582564359978" duration="646000" />
       <workItem from="1582565644296" duration="177000" />
-      <workItem from="1582569755262" duration="599000" />
+      <workItem from="1582569755262" duration="1339000" />
+      <workItem from="1582639754351" duration="2240000" />
     </task>
     <servers />
   </component>
@@ -456,20 +482,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="161" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581004648497" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/beans/MainPageBean.java</url>
-          <line>55</line>
-          <properties class="com.example.beans.MainPageBean" method="addResponse">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JSFTest$Tomcat_8.ic" NAME="Tomcat 8 Coverage Results" MODIFIED="1580591048176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

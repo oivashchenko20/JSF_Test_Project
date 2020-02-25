@@ -2,9 +2,6 @@ package com.example.dto;
 
 import com.example.entity.Type;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Data
 public class FieldDto {

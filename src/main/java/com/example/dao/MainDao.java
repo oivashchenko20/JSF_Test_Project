@@ -1,13 +1,15 @@
-package com.example.DAO;
+package com.example.dao;
 
 import com.example.entity.*;
 import com.example.util.JPAUtil;
 
-import javax.enterprise.inject.Model;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MainDao {
     @PersistenceContext

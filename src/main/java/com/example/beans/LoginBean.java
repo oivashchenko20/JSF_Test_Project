@@ -1,6 +1,6 @@
 package com.example.beans;
 
-import com.example.DAO.UserDao;
+import com.example.dao.UserDao;
 import com.example.dto.PasswordDto;
 import com.example.entity.User;
 import com.example.validator.LoginValidator;
@@ -10,8 +10,6 @@ import lombok.Setter;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 import java.io.Serializable;
 
 @ManagedBean(name = "loginBean")
@@ -25,7 +23,6 @@ public class LoginBean implements Serializable {
     private PasswordDto passwordDto = new PasswordDto();
     private String userMail;
     private User selectedUser;
-    private boolean rememberMe;
 
     public String loginProject() {
         FacesContext context = FacesContext.getCurrentInstance();
@@ -35,12 +32,6 @@ public class LoginBean implements Serializable {
             userMail = userFromDb.getEmail();
             context.getExternalContext().getSessionMap().put("user", selectedUser);
             context.getExternalContext().getSessionMap().put("role", selectedUser.getRole());
-            if (rememberMe) {
-                Cookie email = new Cookie("userEmail", userMail);
-                context.getExternalContext().getSessionMap().put("userEmail", selectedUser.getEmail());
-                HttpServletResponse response = (HttpServletResponse) context.getExternalContext().getResponse();
-                response.addCookie(email);
-            }
             return "home?faces-redirect=true";
         } else {
             LoginValidator.validateLogin();
@@ -74,7 +65,7 @@ public class LoginBean implements Serializable {
 
     public String forgotPassword() {
         if (LoginValidator.validateForgotPassword(user.getEmail())) {
-          userDao.forgotPassword(user.getEmail());
+            userDao.forgotPassword(user.getEmail());
             return "forgotAnswer";
         }
         return "forgotPassword";

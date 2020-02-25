@@ -1,4 +1,5 @@
 package com.example.encodingMD5;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

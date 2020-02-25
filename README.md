@@ -2,7 +2,6 @@
 This project is the test-project for Infostroy Technologies Inc company
 
 
-
 ## Author
 Ivaschenko Oleksandr
 
@@ -23,75 +22,79 @@ Step 5. Write next commands
 
 a)heroku login
 
-b)git clone https://git.heroku.com/test-spring-copybook.git
+b)git clone https://github.com/sowcraft/JSF_Test_Project.git
 
 c)git push heroku master
 
 d)heroku open
 
-In the next type you can use this link https://test-spring-copybook.herokuapp.com/login
+In the next type you can use this link https://test-jsf-questionnaire.herokuapp.com/login
 
 ## Test data
 
-login - admin
+email - oleksandr.ivaschenko20@gmail.com
 
 password - 123 
 ## Functionality
 
-Users in this project have two roles(user,admin). Admin can manipulate User.  
+Users in this project have two roles(user,admin).  
 User can make functions such as:
 
 - Log in the site;
 - Registration;
 - Forgot password;
-- Add new article;
-- Show all article;
-- Delete article;
+- Change password;
 - Edit profile;
+- Using Questionnaire;
 
 Admin has all functions of User and :
 
-- Show User list;
-- Edit user(give him role 'ADMIN');
-- Remove user;
+- Show Response;
+- Add and edit field;
+- Remove field;
 
 Additional functions:
 
-- Save image to server;
 - Forgot password(generate new password and send his to email);
-- Validation on the server;
+- Encode (MD5) password;
 
 ## Main classes
 
-- UserService - service for all main methods(saveUser, addUser, activateUser);
+- LoginBean - main bean for pages as Login, Registration, Change Password, Edit Profile and Forgot Password;
 
-- UserController - main controller for ADMIN functions(EditUser, UserList) and main for EditProfile page;
+- FieldsBean - main bean for page Field;
 
-- RegisterController - main controller for registration and forgot password pages;
+- MainPageBean - main bean for page Questionnaire portal and Response;
 
-- MainController - main controller for articles(add,show,delete);
+- FieldDao - include all methods for FieldBean
 
-- Message - entity class for articles which contains description of variables of table Message;
+- MainDao - include all methods for MainPageBean;
+
+- UserDao - include all methods for LoginBean;
 
 - User - entity class for users which contains description of variables of table User;
 
-- WebSecurityConfig - config for Spring Security and manipulate with roles;
+- MailUtil - set all properties for mail configuration and service for send email notifications;
 
-- MailConfig - set all properties for mail configuration;
+- AuthorizationFilter - filter for unauthorized users;
 
-- MailSender - service for send email notifications;
+- RoleFilter - filter pages for User and for ADMIN;
+
+- package Validator - different type  validation for different pages; 
+
+- JPAUtil - installation entity manager;
 
 ## Main methods
 
 - saveUser() - method that can save user to db;
 
-- activateUser() - method that activated user after email notification;
+- addField() - method that add new Field to db;
 
-- sendMessage() - method that formed message for email notification;
+- getEncoderPassword() - encode password;
 
 - updateProfile() - method that checked input users data and update his;
 
-- setNewPassword() - method that formed message for email notification and set new password;
+- addAnswer() - add user answer on field to db;
 
 ## Main tools
 

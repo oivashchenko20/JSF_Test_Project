@@ -1,10 +1,11 @@
-package com.example.DAO;
+package com.example.dao;
 
 import com.example.dto.FieldDto;
 import com.example.entity.Field;
 import com.example.entity.Option;
 import com.example.entity.User;
 import com.example.util.JPAUtil;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;

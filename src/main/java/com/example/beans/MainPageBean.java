@@ -1,6 +1,6 @@
 package com.example.beans;
 
-import com.example.DAO.MainDao;
+import com.example.dao.MainDao;
 import com.example.entity.*;
 import com.example.validator.HomeValidator;
 import lombok.Data;
@@ -26,7 +26,7 @@ public class MainPageBean implements Serializable {
     private Date dateAnswer;
     private boolean checkAnswer = false;
     private MainDao mainDao = new MainDao();
-    private HashMap<Field, String> answers=new HashMap<>();
+    private HashMap<Field, String> answers = new HashMap<>();
     private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     @PostConstruct
@@ -43,23 +43,23 @@ public class MainPageBean implements Serializable {
         this.answer = "";
     }
 
-    public void addToList(Field field){
-        if (field.getType().equals(Type.DATE)){
-            answer=dateFormat.format(dateAnswer);
+    public void addToList(Field field) {
+        if (field.getType().equals(Type.DATE)) {
+            answer = dateFormat.format(dateAnswer);
         }
-        if (HomeValidator.validateAnswers(field,this.answer)) {
+        if (HomeValidator.validateAnswers(field, this.answer)) {
             answers.put(field, this.answer);
             setCheckAnswer(true);
         }
     }
 
     public String addResponse() {
-       if(checkAnswer){
-        List<Answer> selectAnswers = mainDao.getAllAnswers(answers);
-        mainDao.addResponse(user, selectAnswers);
-        return "respAnswer";
-       }
-       return "home";
+        if (checkAnswer) {
+            List<Answer> selectAnswers = mainDao.getAllAnswers(answers);
+            mainDao.addResponse(user, selectAnswers);
+            return "respAnswer";
+        }
+        return "home";
     }
 
     public List<Response> getAllResponses() {

@@ -16,7 +16,8 @@
             <p:messages id="messages" severity="fatal,info,warn"/>
             <p:inputText value="#{loginBean.user.email}" id="email" styleClass="required" placeholder="Email*"/>
             <p:password value="#{loginBean.user.password}" id="password" styleClass="required" placeholder="Password*"/>
-            <p:password value="#{loginBean.user.confirmPassword}" id="confirm" styleClass="required" placeholder="Confirm Password*"/>
+            <p:password value="#{loginBean.user.confirmPassword}" id="confirm" styleClass="required"
+                        placeholder="Confirm Password*"/>
             <p:inputText value="#{loginBean.user.firstName}" id="firstName" placeholder="First Name"/>
             <p:inputText value="#{loginBean.user.lastName}" id="lastName" placeholder="Last Name"/>
             <p:inputMask mask="999-999-9999" value="#{loginBean.user.mobile}" id="mobile" placeholder="Phone Number"/>

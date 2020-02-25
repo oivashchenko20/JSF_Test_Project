@@ -1,6 +1,6 @@
 package com.example.beans;
 
-import com.example.DAO.FieldDao;
+import com.example.dao.FieldDao;
 import com.example.dto.FieldDto;
 import com.example.entity.Field;
 import com.example.entity.Option;

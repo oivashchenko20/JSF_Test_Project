@@ -115,7 +115,7 @@ public class LoginValidator {
         return true;
     }
 
-    public static boolean validateForgotPassword(String email){
+    public static boolean validateForgotPassword(String email) {
         if (!compareEmail(email)) {
             setMessage(BUNDLE.getString("forgotPassword.valid"), BUNDLE.getString("forgotPassword.valid"));
             return false;

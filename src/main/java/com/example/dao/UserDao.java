@@ -1,4 +1,4 @@
-package com.example.DAO;
+package com.example.dao;
 
 import com.example.dto.PasswordDto;
 import com.example.encodingMD5.EncoderPassword;
