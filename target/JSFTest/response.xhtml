@@ -19,9 +19,9 @@
         <p:outputLabel styleClass="center-logo">Responses</p:outputLabel>
         <p:dataTable style="margin-top: 2%;" value="#{mainBean.allResponses}" var="response" id="table"
                      paginator="true"
-                     rows="5"
+                     rows="#{mainBean.allResponses.size()}"
                      paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
-                     rowsPerPageTemplate="5,#{mainBean.allResponses.size()}"
+                     rowsPerPageTemplate="#{mainBean.allResponses.size()},3"
                      lazy="true"
                      paginatorPosition="bottom">
             <p:columns value="#{mainBean.findFields}" var="field" columnIndexVar="columnIndex" styleClass="output">

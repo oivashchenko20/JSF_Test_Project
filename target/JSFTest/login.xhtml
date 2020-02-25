@@ -20,12 +20,13 @@
             <p:password styleClass="form-control" placeholder="Password" id="password"
                         value="#{loginBean.user.password}"/>
             <p:outputPanel>
-                <p:selectBooleanCheckbox value="#{loginBean.rememberMe}" id="rememberMe"/>
+                <p:selectBooleanCheckbox id="rememberMe"/>
                 <p:outputLabel for="rememberMe" styleClass="output">Remember me</p:outputLabel>
                 <p:link value="Forgot password?" styleClass="link" href="/forgotPassword"/>
             </p:outputPanel>
 
-            <p:commandButton styleClass="btn" style="width: 200px !important;" action="#{loginBean.loginProject}" value="Log in" update="messages"/>
+            <p:commandButton styleClass="btn" style="width: 200px !important;" action="#{loginBean.loginProject}"
+                             value="Log in" update="messages"/>
             <p:outputPanel>
                 <p:outputLabel value="#{client['login.message']}"/>
                 <p:link styleClass="link" value="Sign in" href="/registration"/>
