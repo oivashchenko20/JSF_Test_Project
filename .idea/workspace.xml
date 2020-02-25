@@ -8,13 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/MailUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/MailUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/WEB-INF/classes/com/example/util/MailUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/field.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/field.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JSFTest/response.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JSFTest/response.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/util/MailUtil.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -312,7 +307,7 @@
       <workItem from="1582639754351" duration="2240000" />
       <workItem from="1582642214169" duration="201000" />
       <workItem from="1582642522133" duration="163000" />
-      <workItem from="1582643093412" duration="472000" />
+      <workItem from="1582643093412" duration="880000" />
     </task>
     <servers />
   </component>

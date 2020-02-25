@@ -47,8 +47,8 @@ public class UserDao {
             user.setActive(true);
             user.setRole("USER");
             entityManager.persist(user);
-            MailUtil.sendMail(user.getEmail(), BUNDLE.getString("subject"), BUNDLE.getString("message"));
             entityManager.getTransaction().commit();
+            MailUtil.sendMail(user.getEmail(), BUNDLE.getString("subject"), BUNDLE.getString("message"));
         } catch (Exception ex) {
             ex.printStackTrace();
             entityManager.getTransaction().rollback();
