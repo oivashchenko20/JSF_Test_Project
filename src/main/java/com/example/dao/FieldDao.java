@@ -32,10 +32,10 @@ public class FieldDao {
             field.setRequired(fieldDto.isRequired());
             field.setDelete(false);
             field.setAuthor(user);
-            entityManager.persist(field);
             if (!fieldDto.getText().isEmpty()) {
                 saveOptions(fieldDto.getText(), field);
             }
+            entityManager.persist(field);
             entityManager.getTransaction().commit();
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -71,7 +71,7 @@ public class FieldDao {
         try {
             entityManager.getTransaction().begin();
             field.setAuthor(user);
-            if (field.getType().equals(Type.COMBOBOX)|field.getType().equals(Type.RADIOBUTTON)) {
+            if (field.getType().equals(Type.COMBOBOX) | field.getType().equals(Type.RADIOBUTTON)) {
                 deleteOption(field.getOptions());
                 saveOptions(text, field);
             }

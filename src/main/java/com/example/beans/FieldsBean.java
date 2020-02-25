@@ -62,11 +62,11 @@ public class FieldsBean implements Serializable {
     }
 
     public String addField() {
-        if (!FieldValidator.validField(fieldDto.getName(), fieldDto.getType(), fieldDto.getText())) {
-            return "field";
+        if (FieldValidator.validField(fieldDto.getName(), fieldDto.getType(), fieldDto.getText())) {
+            fieldDao.addField(fieldDto, user);
+            return "field?faces-redirect=true";
         }
-        fieldDao.addField(fieldDto, user);
-        return "field?faces-redirect=true";
+        return "field";
     }
 
     public String deleteField() {

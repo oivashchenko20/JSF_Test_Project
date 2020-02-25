@@ -16,7 +16,7 @@
                       value="jdbc:postgresql://ec2-54-195-247-108.eu-west-1.compute.amazonaws.com:5432/detnd2k169a823"></property>
             <property name="show_sql" value="false"></property>
             <property name="connection_pool_size" value="1"></property>
-            <property name="javax.persistence.schema-generation.database.action" value="none"></property>
+            <property name="javax.persistence.schema-generation.database.action" value="create"></property>
         </properties>
     </persistence-unit>
 </persistence>
