@@ -3,6 +3,7 @@ package com.example.dao;
 import com.example.dto.FieldDto;
 import com.example.entity.Field;
 import com.example.entity.Option;
+import com.example.entity.Type;
 import com.example.entity.User;
 import com.example.util.JPAUtil;
 
@@ -70,7 +71,7 @@ public class FieldDao {
         try {
             entityManager.getTransaction().begin();
             field.setAuthor(user);
-            if (field.getOptions() != null) {
+            if (field.getType().equals(Type.COMBOBOX)|field.getType().equals(Type.RADIOBUTTON)) {
                 deleteOption(field.getOptions());
                 saveOptions(text, field);
             }

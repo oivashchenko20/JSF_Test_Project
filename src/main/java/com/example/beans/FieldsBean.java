@@ -33,6 +33,7 @@ public class FieldsBean implements Serializable {
     public void init() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         this.user = (User) facesContext.getExternalContext().getSessionMap().get("user");
+        this.selectedField=new Field(selectedField);
     }
 
     public List<Field> getAllFields() {
@@ -71,10 +72,10 @@ public class FieldsBean implements Serializable {
     }
 
     public String updateField() {
-        if (!FieldValidator.validField(selectedField.getName(), selectedField.getType(), selectedOption)) {
-            return "field";
+        if (FieldValidator.validField(selectedField.getName(), selectedField.getType(), selectedOption)) {
+            fieldDao.updateField(selectedField, user, selectedOption);
+            return "field?faces-redirect=true";
         }
-        fieldDao.updateField(selectedField, user, selectedOption);
-        return "field?faces-redirect=true";
+        return "field";
     }
 }
