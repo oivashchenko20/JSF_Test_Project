@@ -10,7 +10,7 @@ public class MailUtil implements Serializable {
     private static final String USERNAME = "sashka.ivaschenko@gmail.com";
     private static final String PASSWORD = "QAZ12ass";
 
-    public static void sendMail(String toMail, String subject, String message) {
+    private static Properties getProperties() {
         Properties properties = System.getProperties();
         properties.setProperty("mail.smtp.host", "smtp.gmail.com");
         properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
@@ -21,8 +21,11 @@ public class MailUtil implements Serializable {
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.store.protocol", "pop3");
         properties.put("mail.transport.protocol", "smtp");
+        return properties;
+    }
 
-        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+    public static void sendMail(String toMail, String subject, String message) {
+        Session session = Session.getInstance(getProperties(), new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(USERNAME, PASSWORD);
             }

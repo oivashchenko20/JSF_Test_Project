@@ -69,9 +69,9 @@
         </p:dialog>
         <p:dataTable style="margin-top: 2%" value="#{fieldBean.allFields}" var="field"
                      paginator="true"
-                     rows="#{fieldBean.allFields.size()}"
+                     rows="3"
                      paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
-                     rowsPerPageTemplate="#{fieldBean.allFields.size()},3"
+                     rowsPerPageTemplate="3,#{fieldBean.allFields.size()}"
                      lazy="true"
                      paginatorPosition="bottom">
             <p:column headerText="Label">
