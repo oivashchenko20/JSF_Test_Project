@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="" />
+    <list default="true" id="92691f1a-9031-4420-920e-8ba28eaefaf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/clientMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/clientMessages.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,6 +316,7 @@
       <workItem from="1582649685737" duration="14000" />
       <workItem from="1582650010369" duration="1826000" />
       <workItem from="1582652168858" duration="129000" />
+      <workItem from="1582654050212" duration="52000" />
     </task>
     <servers />
   </component>
